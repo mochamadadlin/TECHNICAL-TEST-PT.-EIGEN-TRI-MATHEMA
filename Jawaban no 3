@@ -1,0 +1,16 @@
+function countOccurrences(input, query) {
+    const result = [];
+
+    for (let q of query) {
+        const count = input.filter(item => item === q).length; // Hitung kemunculan
+        result.push(count); // Tambahkan ke hasil
+    }
+
+    return result;
+}
+
+const INPUT = ['xc', 'dz', 'bbb', 'dz'];
+const QUERY = ['bbb', 'ac', 'dz'];
+
+const output = countOccurrences(INPUT, QUERY);
+console.log(output); // [1, 0, 2]
